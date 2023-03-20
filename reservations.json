@@ -1,0 +1,152 @@
+{
+  "reservations": [
+    {
+      "id": "2cedf31e-0d43-449e-a46a-cf5f85942c71",
+      "stay": {
+        "arrivalDate": "2021-11-18T05:00:00.000Z",
+        "departureDate": "2021-11-25T05:00:00.000Z"
+      },
+      "room": {
+        "roomSize": "business-suite",
+        "roomQuantity": 3
+      },
+      "firstName": "IDM",
+      "lastName": "ENG",
+      "email": "idm.test@idm.com",
+      "phone": "9999999999",
+      "addressStreet": {
+        "streetName": "IDM Street",
+        "streetNumber": "1234"
+      },
+      "addressLocation": {
+        "zipCode": "123456",
+        "state": "Arizona",
+        "city": "OAKVILLE"
+      },
+      "extras": [
+        "extraBreakfast",
+        "extraTV",
+        "extraWiFi",
+        "extraParking",
+        "extraBalcony"
+      ],
+      "payment": "cc",
+      "note": "idm lab test",
+      "tags": [
+        "hotel",
+        "booking",
+        "labtest"
+      ],
+      "reminder": true,
+      "newsletter": true,
+      "confirm": false
+    },
+    {
+      "id": "287a37ea-5d6d-4de4-80c4-e3cdc7563c9d",
+      "stay": {
+        "arrivalDate": "2021-11-01T04:00:00.000Z",
+        "departureDate": "2021-11-04T04:00:00.000Z"
+      },
+      "room": {
+        "roomSize": "presidential-suite",
+        "roomQuantity": 2
+      },
+      "firstName": "IDM",
+      "lastName": "PM",
+      "email": "idm.op@idm.com",
+      "phone": "123456789",
+      "addressStreet": {
+        "streetName": "IDM",
+        "streetNumber": "1234"
+      },
+      "addressLocation": {
+        "zipCode": "123456",
+        "state": "Arkansas",
+        "city": "OAK"
+      },
+      "extras": [
+        "extraParking",
+        "extraBalcony"
+      ],
+      "payment": "cash",
+      "note": "lab test",
+      "tags": [
+        "angular",
+        "material",
+        "labtest"
+      ],
+      "reminder": true,
+      "newsletter": false,
+      "confirm": true
+    },
+    {
+      "id": "287a37ea-5d6d-4de4-87c4-e3cdc7563c9l",
+      "stay": {
+        "arrivalDate": "2021-11-01T04:00:00.000Z",
+        "departureDate": "2021-11-04T04:00:00.000Z"
+      },
+      "room": {
+        "roomSize": "presidential-suite",
+        "roomQuantity": 2
+      },
+      "firstName": "IDM",
+      "lastName": "PM",
+      "email": "idm.op@idm.com",
+      "phone": "123456789",
+      "addressStreet": {
+        "streetName": "IDM",
+        "streetNumber": "1234"
+      },
+      "addressLocation": {
+        "zipCode": "123456",
+        "state": "Arkansas",
+        "city": "OAK"
+      },
+      "extras": [
+        "extraParking",
+        "extraBalcony"
+      ],
+      "payment": "cash",
+      "note": "lab test",
+      "tags": [
+        "angular",
+        "material",
+        "labtest"
+      ],
+      "reminder": true,
+      "newsletter": false,
+      "confirm": true
+    },
+    {
+      "id": "ebcc5f52-1d3f-4fa6-9c2a-3c94fb8388da",
+      "stay": {
+        "arrivalDate": "2023-03-22T04:00:00.000Z",
+        "departureDate": "2023-03-23T04:00:00.000Z"
+      },
+      "room": {
+        "roomSize": "business-suite",
+        "roomQuantity": 4
+      },
+      "firstName": "Nikhs",
+      "lastName": "sdfsdfs",
+      "email": "sdf@df.cds",
+      "phone": "234234234",
+      "addressStreet": {
+        "streetName": "Ada Cres",
+        "streetNumber": "5"
+      },
+      "addressLocation": {
+        "zipCode": "324223",
+        "state": "Ontario",
+        "city": "Scarborough"
+      },
+      "extras": [],
+      "payment": "cash",
+      "note": "",
+      "tags": [],
+      "reminder": false,
+      "newsletter": false,
+      "confirm": false
+    }
+  ]
+}

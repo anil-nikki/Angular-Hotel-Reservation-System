@@ -9,7 +9,8 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+                
       ],
     }).compileComponents();
   });
@@ -23,13 +24,13 @@ describe('AppComponent', () => {
   it(`should have as title 'angular-hotel-reservation-system'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-hotel-reservation-system');
+    expect(app.title).toEqual('Hotel Reservation System');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-hotel-reservation-system app is running!');
+    expect(compiled.querySelector('.header-title')?.textContent).toContain('Hotel Reservation System');
   });
 });

@@ -1,0 +1,34 @@
+<div class="container">  
+  <form [formGroup]="filterForm"> 
+    <div class="form-data">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="nameFilter" (keyup)="applyFilter()">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="emailFilter" (keyup)="applyFilter()">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Phone Number</mat-label>
+        <input matInput formControlName="phoneFilter" (keyup)="applyFilter()">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Room Type</mat-label>
+        <input matInput formControlName="roomSizeFilter" (keyup)="applyFilter()">
+      </mat-form-field>    
+      <button mat-raised-button color="primary" (click)="resetFilter()">Reset</button>
+    </div>           
+  </form>       
+</div>
+
+<div class="spinner" *ngIf="isLoading">
+  <mat-spinner></mat-spinner>
+</div>
+
+<app-search-results *ngIf="!isLoading"
+[dataSource] = "dataSource" 
+[displayedColumns] = "displayedColumns"
+[filter] = "filterBy"
+(modalDataEventEmitter)="openReservationDialog($event)">
+</app-search-results>

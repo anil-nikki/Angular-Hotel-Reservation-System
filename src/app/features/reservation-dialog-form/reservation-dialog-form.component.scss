@@ -1,0 +1,29 @@
+.container {
+    margin: 20px 0;
+    mat-form-field {
+        width: 100%;
+    }
+    mat-slide-toggle, mat-checkbox, .form-action {
+        margin-bottom: 20px;
+    }
+    mat-checkbox {
+        left: -10px;    
+    }
+
+    mat-hint {
+        color: grey;
+    }
+    
+    .form-action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+         margin-left: 10px;
+         width: 100%;
+        }
+    }    
+}
+.add-reservation {
+    text-align: end;
+}

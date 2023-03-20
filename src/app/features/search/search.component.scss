@@ -1,0 +1,25 @@
+.container {
+    margin-top: 20px;     
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    mat-form-field, button {
+        margin: 0 15px;        
+    }
+    button{
+        margin-bottom: 15px;
+    }       
+}
+
+.spinner {
+    display: flex;    
+    align-items: center;
+    height: 60px;
+    justify-content: center;    
+    mat-spinner {        
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+

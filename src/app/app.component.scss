@@ -1,0 +1,28 @@
+header {
+    align-items: center;
+    border: 1px none;
+    position: relative;
+    padding: 5px 15px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #e6e9ee;
+    box-shadow: 0 1px 6px #808f9c;
+    .container {
+      margin: 0 20px 0 0;
+      .header-title{
+        position: absolute;
+        top:30%;
+        color: #220002;
+      }
+      .logo{
+        display: flex;
+        justify-content: center;
+        img {
+          height: 67px;
+          width: 67px;
+        }
+      }
+    }  
+}
+  
