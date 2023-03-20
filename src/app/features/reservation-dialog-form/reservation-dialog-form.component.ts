@@ -198,15 +198,13 @@ export class ReservationDialogFormComponent implements OnInit {
       }
     });
     confirmationDialogRef.afterClosed().subscribe( result => {
-      console.log("result:", result);
-      if(this.reservationModalData.rowdata?.id && result.event === 'confirmDelete'){
+       if(this.reservationModalData.rowdata?.id && result.event === 'confirmDelete'){
         this.reservationService.deleteReservation(this.reservationModalData.rowdata.id).subscribe({
           next: () => {
             this.closeDialog('confirmDelete');
             this.toastr.success("Reservation Deleted Successfully!")
           },
           error: (error) => {
-            console.log("deleteError", error);
             this.toastr.error(error);
           }
         });
@@ -216,7 +214,6 @@ export class ReservationDialogFormComponent implements OnInit {
 
   onSubmit(){
     this.formSubmitted = true;
-    console.log("onsubmit", this.reservationForm.value);
     if(this.reservationForm.valid){
       this.reservationForm.patchValue({
         tags: this.tagsList
@@ -226,7 +223,6 @@ export class ReservationDialogFormComponent implements OnInit {
         ...this.reservationForm.value
       }
       if(this.reservationModalData.action === 'add'){
-        console.log("onsubmit1 add", this.reservationForm.value);
         this.reservationService.createNewReservation(requestData).subscribe({
           next: () => {            
             this.closeDialog('save');
@@ -243,7 +239,6 @@ export class ReservationDialogFormComponent implements OnInit {
             this.toastr.success("Reservation Successfully Updated!");         
           },
           error: (error) => {
-            console.log("errorupdate", this.reservationForm.value);
             this.toastr.error(error);
           }
         });

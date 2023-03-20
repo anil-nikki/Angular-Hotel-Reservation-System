@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, EventEmitter, Output, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, Input, EventEmitter, Output, ViewChild, AfterViewInit } from '@angular/core';
 import { Reservation, ReservationModalData } from '../../../resources/reservation.model';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
@@ -8,7 +8,7 @@ import { MatPaginator } from '@angular/material/paginator';
   templateUrl: './search-results.component.html',
   styleUrls: ['./search-results.component.scss']
 })
-export class SearchResultsComponent implements OnInit, AfterViewInit{
+export class SearchResultsComponent implements AfterViewInit{
   @Input() dataSource!: MatTableDataSource<Reservation>;
   @Input() displayedColumns!: string[];
   @Input() filter!: string;
@@ -16,10 +16,6 @@ export class SearchResultsComponent implements OnInit, AfterViewInit{
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   
-   ngOnInit(){
-    console.log("dataSourceinit:", this.dataSource);
-  }
-
   ngAfterViewInit() {
     if(this.paginator){
       this.dataSource.paginator = this.paginator;
@@ -27,7 +23,6 @@ export class SearchResultsComponent implements OnInit, AfterViewInit{
   }
 
   openReservationDialog(action: string, reservation?: Reservation){
-    console.log("openDialogData", reservation);
     let reservationModalData!: ReservationModalData;
     if(action === 'add') {
       reservationModalData = {

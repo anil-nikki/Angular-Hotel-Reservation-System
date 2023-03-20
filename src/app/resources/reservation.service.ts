@@ -32,7 +32,6 @@ export class ReservationService {
   
   /** POST- to add a new reservation to server*/
   createNewReservation(reservation:Reservation): Observable<Reservation> {  
-    console.log("onsubmitservice");  
     return this.http.post<Reservation>(this.apiUrl, reservation, this.httpOptions).pipe(
       catchError(this.handleError)
     )
@@ -60,7 +59,6 @@ export class ReservationService {
    */
    // eslint-disable-next-line @typescript-eslint/no-explicit-any
    private handleError(error: HttpErrorResponse): Observable<any> {
-    console.log("Error: service", error);
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
       // client-side error
