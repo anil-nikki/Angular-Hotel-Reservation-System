@@ -148,6 +148,7 @@ describe('ReservationService', () => {
         error: err => expect(err).toEqual(errorMessage)
       });
       const req = httpMock.expectOne('http://localhost:3000/reservations');
+      expect(req.request.method).toBe('POST');
       req.flush(errorMessage, { status: 500, statusText: 'Internal Server Error' });
     });
   })
@@ -170,6 +171,7 @@ describe('ReservationService', () => {
         error: err => expect(err).toEqual(errorMessage)
       });
       const req = httpMock.expectOne('http://localhost:3000/reservations/287a37ea-5d6d-4de4-80c4-e3cdc7563c9d');
+      expect(req.request.method).toBe('PUT');
       req.flush(errorMessage, { status: 500, statusText: 'Internal Server Error' });
     });
   })
@@ -193,9 +195,8 @@ describe('ReservationService', () => {
       });
       const req = httpMock.expectOne('http://localhost:3000/reservations/287a37ea-5d6d-4de4-80c4-e3cdc7563c9d');
       req.flush(errorMessage, { status: 500, statusText: 'Internal Server Error' });
+      expect(req.request.method).toBe('DELETE');
     });
-  })
-
- 
+  }) 
 
 });
