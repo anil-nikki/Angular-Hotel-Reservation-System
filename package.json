@@ -6,7 +6,7 @@
     "start": "concurrently \"ng serve --port 4500 --proxy-config proxy.config.json\" \"json-server --watch reservations.json --port 3000\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --browsers=ChromeHeadless --watch=false",
+    "test": "ng test --watch=false --browsers=ChromeHeadless --code-coverage",
     "lint": "ng lint"
   },
   "private": true,
